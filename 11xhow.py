@@ -14,11 +14,9 @@ for x in range (2,num_length+1,2):
     f=e/(10**(x-1))
     g=(math.floor(f))
     h=h+g
-if d > h:
-    i=d-h
-else:
-    j=h-d
-if i%11 == 0 or j%11 == 0:
+i=d-h
+abs(i)
+if i%11 == 0:
     print('這是11的倍數')
 else:
     print('這不是11的倍數')
