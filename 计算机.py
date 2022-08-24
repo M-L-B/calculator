@@ -96,7 +96,11 @@ for x in range(5):
     y=Fraction(answer3/answer1)
     answer=x , y
   if oper == '12':
-    answer=(random.random()*30)
+    answer=0
+    while answer < 40:
+      answer=(random.random()*50)
+      if answer < 40:
+        print("%.2f" % answer)
   if oper == '13':
     a=float(input('你的短邊等於什麽'))
     b=float(input('你的長邊等於什麽'))

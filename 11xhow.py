@@ -15,7 +15,7 @@ for x in range (2,num_length+1,2):
     g=(math.floor(f))
     h=h+g
 i=d-h
-abs(i)
+i=abs(i)
 if i%11 == 0:
     print('這是11的倍數')
 else:
