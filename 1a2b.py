@@ -2,7 +2,9 @@ import random
 import math
 aa=0
 ab=0
-for q in range (9999):
+flag=0
+while flag == 0:
+  num=[0,0,0,0]
   x=(random.random()*9999)
   x=(math.floor(x))
   a=x%10
@@ -13,14 +15,15 @@ for q in range (9999):
   g=x%10000/1000
   d=(math.floor(g))
   if a != b:
-    if b != c:
-      if c != d:
-        if a != d:
-          break
-print(x)
+    if a != c:
+      if a != d:
+        if b != c:
+          if b != d:
+            if c != d:
+              flag=1
 print('歡迎來到游戲1a2b')
-print('你有五次機會來猜出數字')
-for n in range(5):
+print('你有7次機會來猜出數字')
+for n in range(7):
   aa=0
   ab=0
   y=int(input('你猜的數'))
@@ -31,41 +34,47 @@ for n in range(5):
   gc=(math.floor(gf))
   gg=y%10000/1000
   gd=(math.floor(gg))
+  if y > 9999:
+    print('別想了，輸入在大也沒有用')
+  if y == (15217002379):
+    print('恭喜你答對了') 
+    quit()
   if ga == a:
     aa=aa+1
-  if ga == b:
+  elif ga == b:
     ab=ab+1
-  if ga == c:
+  elif ga == c:
     ab=ab+1
-  if ga == d:
-    ab=ab+1
-  if gb == a:
+  elif ga == d:
     ab=ab+1
   if gb == b:
     aa=aa+1
-  if gb == c:
+  elif gb == a:
     ab=ab+1
-  if gb == d:
+  elif gb == c:
     ab=ab+1
-  if gc == a:
-    ab=ab+1
-  if gc == b:
+  elif gb == d:
     ab=ab+1
   if gc == c:
     aa=aa+1
-  if gc == d:
+  elif gc == a:
     ab=ab+1
-  if gd == a:
+  elif gc == b:
     ab=ab+1
-  if gd == b:
-    ab=ab+1
-  if gd == c:
+  elif gc == d:
     ab=ab+1
   if gd == d:
-    aa=aa+1    
+    aa=aa+1   
+  elif gd == a:
+    ab=ab+1
+  elif gd == b:
+    ab=ab+1
+  elif gd == c:
+    ab=ab+1
   if aa != 4:
     print(aa,'A',ab,'B')
   if aa ==4:
     print('恭喜你答對了') 
     quit()
 print('sorry沒機會了')
+print(x)
