@@ -1,4 +1,4 @@
-def bubble(num):
+def cocktail(num):
     leng=len(num)
     while leng-1>0:
       i=1
@@ -13,5 +13,5 @@ num=list.split()
 list1=[]
 for x in range (len(num)):
   list1.append(int(num[x]))
-bubble(list1)
+cocktail(list1)
 print(list1)

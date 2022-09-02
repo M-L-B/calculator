@@ -36,9 +36,10 @@ for n in range(7):
   gd=(math.floor(gg))
   if y > 9999:
     print('別想了，輸入在大也沒有用')
+
   if y == (15217002379):
     print('恭喜你答對了') 
-    quit()
+    
   if ga == a:
     aa=aa+1
   elif ga == b:
