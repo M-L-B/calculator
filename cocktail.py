@@ -2,18 +2,16 @@ def cocktail(num):
     leng=len(num)
     while leng/2-1>0:
       i=1
-      j=0
-      while j<leng-2*i+1 :
-        if(num[i]<num[i-1]):
-            num[i],num[i-1]=num[i-1],num[i]
-        print(num)
-        j+=1
-      print('--')
+      while leng/2+1>i :
+        j=0
+        while j < leng-2*i+1:
+          if(num[j+i-1]>num[j+1]):
+              num[j+i-1],num[j+1]=num[i+1],num[j+i-1]
+          j+=1
       j=0
       while j<leng-2*i:
-        if(num[int(leng-i-1)]<num[leng-i]):
-            num[int(leng-i-1)],num[leng-i]=num[leng-i],num[int(leng-i-1)]
-        print(num)
+        if(num[int(leng-j-i-2)]>num[leng-j-i-1]):
+            num[int(leng-j-i-2)],num[leng-j-i]=num[leng-j-i],num[int(leng-j-i-2)]
         j+=1
       i+=1
     return num
