@@ -1,0 +1,6 @@
+str=string
+like:10.5中的'你好我好大家好!?'
+int=integer=整數
+like:10.5中的10
+float=~~
+like:10.5中的10.5

@@ -1,37 +1,20 @@
-import math
-num=int(input('你想要輸入的正整數'))
-num_str=str(num)
-num_length=(len(num_str))
-d=0
-h=0
+num=str(input('你想要輸入的正整數'))
+num_length=(len(num))
+#n=修改次數
 n=0
-g=0
-for x in range (1,num_length-2+1,1):
-    a=num%(10**x)
-    b=a/(10**(x-1))
-    c=(math.floor(b))
-    c=(c*(10**(x-1)))
-    d=d+c
-print(d)
-for x in range (3,num_length+1,1):
-    e=num%(10**x)
-    f=e/(10**(x-1))
-    g=(math.floor(f))
-    g=(g*(10**(x-1)))
-    h=h+g
-h=h/100
-g=g/1000
-nd=h-g*10
-print(h)
-print(nd)
-if h > 12:
+x=num.split('-')
+day=x[1]
+day_int=int(day)
+month=x[0]
+month_int=int(month)
+month_int=int(x[0])
+month_2=month_int%10
+if month_int > 12:
     n=n+1
-print(n)
-if nd==0 or nd==1 or nd==2 or nd==3 or nd==5 or nd==7 or nd==8:
-    if d > 31:
+if month_2==0 or month_2==1 or month_2==2 or month_2==3 or month_2==5 or month_2==7 or month_2==8:
+    if day_int > 31:
       n=n+1
-print(n)
-if nd==4 or nd==6 or nd==9:
-    if d > 30:
+if month_2==4 or month_2==6 or month_2==9:
+    if day_int > 30:
       n=n+1
 print(n)

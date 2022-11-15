@@ -22,8 +22,8 @@ while flag == 0:
             if c != d:
               flag=1
 print('歡迎來到游戲1a2b')
-print('你有7次機會來猜出數字')
-for n in range(7):
+print('你有10次機會來猜出數字')
+for n in range(10):
   aa=0
   ab=0
   y=int(input('你猜的數'))
@@ -34,12 +34,11 @@ for n in range(7):
   gc=(math.floor(gf))
   gg=y%10000/1000
   gd=(math.floor(gg))
-  if y > 9999:
-    print('別想了，輸入在大也沒有用')
-
   if y == (15217002379):
     print('恭喜你答對了') 
-    
+    quit()
+  if y > 9999:
+    print('別想了，輸入在大也沒有用')
   if ga == a:
     aa=aa+1
   elif ga == b:
